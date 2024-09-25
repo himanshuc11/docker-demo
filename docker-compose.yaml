@@ -16,6 +16,12 @@ services:
       - type: bind
         source: ./index.js
         target: /app/index.js
+    secrets:
+      - express_env
 
 volumes:
   mongo-volume:
+
+secrets:
+  express_env:
+    file: .env.sample
